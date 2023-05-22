@@ -1,0 +1,48 @@
+/* La responsabilidad en un sitio web se refiere a la capacidad que tiene para adaptarse y verse correctamente en diferentes dispositivos y tamaños de pantalla, como computadoras de escritorio, tabletas y teléfonos móviles. Es esencial para proporcionar una experiencia de usuario óptima en cualquier dispositivo. */
+
+
+body{
+    text-align: center;
+    color: red;
+}
+
+/*
+CSS nos ofrece una herramienta poderosa llamada Media Query (consulta de medios) para lograr esto. Una media query es una regla de CSS que se aplica SOLO cuando se cumplen ciertas condiciones, estas condiciones están relacionadas con las características del dispositivos, como el ancho de la pantalla, la orientación y la resoluación.
+
+La sintaxis par una media query es:
+@media(parametros o condiciones a cumplir) {
+    estilos que se aplican cuando se cumplen las condiciones
+}
+
+*/
+
+/* Primera Media Query para cambiar el color del texto a aun color azul cuando el ancho  de la pantallar sea menor o igual a 500px */
+
+@media(max-width:500px) {
+    body {
+        color: blue;
+    }
+
+    .parrafo {
+        display: none;
+    }
+
+    
+}
+
+/* Media Query para cambiar el color de nuestros textops a verde, cuando se detecte un cambio en la orientación de la ventana */ /*En este caso el ancho es más grande que la altura y por eso cambia de color*/
+
+@media(orientation:landscape){
+    body{
+        color: green
+    };
+}
+
+/* Media Query para cambiar el color de nuestros textos a amarillo, cuando se detecte una orientación landscape y además un ancho máximo de 500px */
+
+@media (orientation:landscape) and (max-width:600px){
+    body{
+        color: goldenrod;
+        font-family: impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+}
